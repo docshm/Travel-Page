@@ -1,0 +1,176 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #d8e2dc;
+}
+
+nav {
+  border: 2px solid black;
+  min-height: 8vh;
+  width: 100vw;
+  background-color: #264653;
+  align-items: center;
+  box-shadow: 2px 10px 2px 10px rgb(79, 31, 151);
+}
+
+ul {
+  list-style: none;
+  color: whitesmoke;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(25px, 1fr);
+}
+nav li:hover {
+  font-size: 1.2em;
+}
+
+.card {
+  margin: 40px auto;
+  padding: 10px;
+  width: 80vw;
+  height: 50vh;
+  animation-name: slider;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes slider {
+  0% {
+    background-image: url(https://images.unsplash.com/photo-1509225770129-fbcf8a696c0b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGFub3JhbWF8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80);
+  }
+  25% {
+    background-image: url(https://image.shutterstock.com/image-photo/brooklyn-bridge-panorama-sunset-260nw-319481531.jpg);
+  }
+  50% {
+    background-image: url(https://cdn-7.nikon-cdn.com/Images/Learn-Explore/Photography-Techniques/2011/Rod-Planck-Panoramas/Media/Rod-Planck-Panoramas-01.jpg);
+  }
+  75% {
+    background-image: url(https://images.unsplash.com/photo-1513735539099-cf6e5d559d82?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cGFub3JhbWF8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80);
+  }
+  100% {
+    background-image: url(https://amazingsky.files.wordpress.com/2019/06/10-bow-lake-by-night-panorama.jpg);
+  }
+}
+
+hr {
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double #333;
+  color: #333;
+  text-align: center;
+}
+hr:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+}
+
+section {
+  margin-bottom: 40px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+section div {
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#h {
+  font-family: "Niconne", cursive;
+  font-size: 1.1em;
+  line-height: 1em;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+#h:hover {
+  font-size: 1.2em;
+}
+
+.d {
+  width: 350px;
+  height: 350px;
+  margin: 20px auto;
+}
+.d > .front {
+  position: absolute;
+  transform: perspective(800px) rotateY(0deg);
+  width: 350px;
+  height: 350px;
+  backface-visibility: hidden;
+  transition: transform 0.5s linear 0s;
+}
+.d > .back {
+  position: absolute;
+  transform: perspective(800px) rotateY(180deg);
+  background: #adb5bd;
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  transition: transform 0.5s linear 0s;
+}
+.d:hover > .front {
+  transform: perspective(800px) rotateY(-180deg);
+}
+.d:hover > .back {
+  transform: perspective(800px) rotateY(0deg);
+}
+
+img {
+  height: 350px;
+  width: 350px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.d {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: "Niconne", cursive;
+}
+.d h1 {
+  text-decoration: underline;
+  color: #14213d;
+  font-weight: 800;
+}
+li i {
+  font-size: 1.5em;
+}
+a {
+  text-decoration: none;
+  color: azure;
+}
+footer {
+  border: 2px solid black;
+  min-height: 8vh;
+  width: 100vw;
+  background-color: #264653;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 10px 10px 10px 20px rgb(79, 31, 151);
+}
+
+footer li {
+  text-decoration: none;
+  list-style: none;
+  color: whitesmoke;
+  text-align: center;
+}
+footer li:hover {
+  font-size: 1.2em;
+}
